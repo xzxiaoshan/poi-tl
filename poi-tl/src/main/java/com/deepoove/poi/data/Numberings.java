@@ -32,6 +32,14 @@ public class Numberings {
         return of(NumberingFormat.BULLET);
     }
 
+    public static NumberingBuilder ofBullet(String... text) {
+        NumberingBuilder inst = of(NumberingFormat.BULLET);
+        if (null != text) {
+            Arrays.stream(text).forEach(inst::addItem);
+        }
+        return inst;
+    }
+
     public static NumberingBuilder ofDecimal() {
         return of(NumberingFormat.DECIMAL);
     }
@@ -50,6 +58,54 @@ public class Numberings {
 
     public static NumberingBuilder ofDecimalParentheses(String... text) {
         NumberingBuilder inst = of(NumberingFormat.DECIMAL_PARENTHESES);
+        if (null != text) {
+            Arrays.stream(text).forEach(inst::addItem);
+        }
+        return inst;
+    }
+
+    public static NumberingBuilder ofLowerLetter() {
+        return of(NumberingFormat.LOWER_LETTER);
+    }
+
+    public static NumberingBuilder ofLowerLetter(String... text) {
+        NumberingBuilder inst = of(NumberingFormat.LOWER_LETTER);
+        if (null != text) {
+            Arrays.stream(text).forEach(inst::addItem);
+        }
+        return inst;
+    }
+
+    public static NumberingBuilder ofLowerRoman() {
+        return of(NumberingFormat.LOWER_ROMAN);
+    }
+
+    public static NumberingBuilder ofLowerRoman(String... text) {
+        NumberingBuilder inst = of(NumberingFormat.LOWER_ROMAN);
+        if (null != text) {
+            Arrays.stream(text).forEach(inst::addItem);
+        }
+        return inst;
+    }
+
+    public static NumberingBuilder ofUpperLetter() {
+        return of(NumberingFormat.UPPER_LETTER);
+    }
+
+    public static NumberingBuilder ofUpperLetter(String... text) {
+        NumberingBuilder inst = of(NumberingFormat.UPPER_LETTER);
+        if (null != text) {
+            Arrays.stream(text).forEach(inst::addItem);
+        }
+        return inst;
+    }
+
+    public static NumberingBuilder ofUpperRoman() {
+        return of(NumberingFormat.UPPER_ROMAN);
+    }
+
+    public static NumberingBuilder ofUpperRoman(String... text) {
+        NumberingBuilder inst = of(NumberingFormat.UPPER_ROMAN);
         if (null != text) {
             Arrays.stream(text).forEach(inst::addItem);
         }
